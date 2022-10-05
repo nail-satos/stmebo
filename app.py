@@ -46,7 +46,7 @@ if st.button('送信'):
     st.session_state.list.append(ai_message)
 
 # AIとの会話ログ
-for num in range(len(st.session_state.list)):
+for num in reversed(range(len(st.session_state.list))):
     if 0 == num % 2:
         st.write('あなた:' + st.session_state.list[num])
     else:
