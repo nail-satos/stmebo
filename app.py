@@ -31,11 +31,13 @@ def post_mebo(message):
 if 'list' not in st.session_state:
     st.session_state.list = []
 
+
 # タイトル
-st.title('AIチャット')
+st.header('AIとおしゃべりしよう')
 
 # メッセージを入力するテキストエリア
-you_message= st.text_area(label='メッセージの入力')
+you_message= st.text_area(label='メッセージを入力して「送信」ボタンを押してください')
+st.caption('例）こんにちは！　元気？　昨日は何を食べた？　どんなゲームが好き？　など自由に入力してください')
 
 # ボタンを押したら、post_mebo関数が呼び出される
 if st.button('送信'):
@@ -48,4 +50,8 @@ for num in range(len(st.session_state.list)):
     if 0 == num % 2:
         st.write('あなた:' + st.session_state.list[num])
     else:
-        st.write('AI:' + st.session_state.list[num])
+        st.write('AIさん:' + st.session_state.list[num])
+
+
+# 会話のラリーができるAIのAPIを公開した話【個人開発】 - Qiita
+# https://qiita.com/maKunugi/items/14f1b82a2c0b6fa5c202
