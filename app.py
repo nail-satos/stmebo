@@ -32,6 +32,11 @@ if 'list' not in st.session_state:
     st.session_state.list = []
 
 
+# タブに表示されるページ名の変更
+st.set_page_config(page_title="AIとおしゃべりしよう")
+# Streamlit入門 – テーマの変更, ページの設定 | 楽しみながら理解するAI・機械学習入門
+# https://data-analytics.fun/2022/07/10/streamlit-theme-page-settings/
+
 # タイトル
 st.header('AIとおしゃべりしよう')
 
